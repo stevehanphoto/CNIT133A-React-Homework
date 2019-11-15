@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-//import "tether/dist/js/tether.min.js";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.min.css";
+//import $ from "jquery";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

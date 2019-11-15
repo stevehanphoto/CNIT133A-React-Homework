@@ -29,12 +29,15 @@ class App extends Component {
   };
 
   render() {
+    const totalEvents = this.state.events.length > 0 ?
+      this.state.events
+      .map(event => event.count)
+      .reduce((prev, next) => prev + next) : 0; 
+
     return (
       <React.Fragment>
         <TotalEnrollments
-          totalEvents={this.state.events
-            .map(event => event.count)
-            .reduce((prev, next) => prev + next)}
+          totalEvents={ totalEvents }
         />
         <main className="container">
           <EventList

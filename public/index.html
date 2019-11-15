@@ -39,6 +39,9 @@
       $(document).ready(function () {
         $('[data-toggle="tooltip"]').tooltip();
       });
+      $('[rel="tooltip"]').on('click', function () {
+          $(this).tooltip('hide')
+        })
     </script>
     <div id="root"></div>
     <!--

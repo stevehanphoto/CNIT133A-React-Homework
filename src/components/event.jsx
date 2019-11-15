@@ -3,13 +3,19 @@ import "font-awesome/css/font-awesome.min.css";
 import "./event.css"
 
 class Event extends Component {
+/*  componentDidMount() {
+      $('[rel="tooltip"]').on("click", function() {
+        $(this).tooltip("hide");
+      });
+  }
+*/
   handleAddButton = () => {
     this.setState({ event: this.state.event.count + 1 });
   };
 
   render() {
     return (
-      <li className="row align-items-center"> 
+      <li className="row align-items-center">
         <div className="courses text-wrap col-lg-10 col-md-8 col-sm-10 col-xs-12">
           {this.props.event.name}
           <span className={this.setBadgeClasses()}>{this.formatCt()}</span>
@@ -22,6 +28,7 @@ class Event extends Component {
               data-toggle="tooltip"
               data-placement="bottom"
               title="Add Event"
+              data-trigger="hover"
             >
               <span className="fa fa-plus icon-2x"></span>
             </button>
@@ -31,6 +38,7 @@ class Event extends Component {
               data-toggle="tooltip"
               data-placement="bottom"
               title="Cancel Event"
+              data-trigger="hover"
             >
               <span className="fa fa-trash icon-2x"></span>
             </button>
