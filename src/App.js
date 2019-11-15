@@ -1,19 +1,11 @@
 import React, { Component } from "react";
 import TotalEnrollments from "./components/totalenrolls";
-//import LstCounters from "./components/lstcounters";
 import EventList from "./components/eventlist";
 import events from "./events.json";
 import "./App.css";
 
 class App extends Component {
-/*  state = {
-    events: [
-      { id: 1, name: "", value: 0 },
-      { id: 2, name: "", value: 0 },
-      { id: 3, name: "", value: 0 },
-      { id: 4, name: "", value: 0 }
-    ]
-  };*/
+
   constructor()
   {
     super();

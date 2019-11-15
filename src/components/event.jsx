@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "font-awesome/css/font-awesome.min.css";
+import "./event.css"
 
 class Event extends Component {
   handleAddButton = () => {
@@ -7,33 +9,41 @@ class Event extends Component {
 
   render() {
     return (
-      <li className="row">
-        <div className="col-6">
+      <li className="row align-items-center"> 
+        <div className="courses text-wrap col-lg-10 col-md-8 col-sm-10 col-xs-12">
+          {this.props.event.name}
           <span className={this.setBadgeClasses()}>{this.formatCt()}</span>
-          <span>{this.props.event.name} {this.props.event.count}</span>
         </div>
-        <div className="col-6 m-xs-0 p-xs-0">
-          <button
-            onClick={() => this.props.onIncrement(this.props.event)}
-            className="btn btn-primary btn-sm">
-            Add
+        <div className="col-lg-2 col-md-4 col-sm-1 m-xs-0 p-xs-0">
+          <div className="buttons-container d-flex justify-content-end">
+            <button
+              className="btn m-xs-0 p-xs-0 add-buttons d-inline-flex"
+              onClick={() => this.props.onIncrement(this.props.event)}
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Add Event"
+            >
+              <span className="fa fa-plus icon-2x"></span>
             </button>
-          <button
-            onClick={() => this.props.onDelete(this.props.event.id)}
-            className="btn btn-warning btn-sm m-sm-3 m-xs-0">
-            Cancel Event
-          </button>
+            <button
+              className="btn m-xs-0 p-xs-0 cancel-buttons d-inline-flex"
+              onClick={() => this.props.onDelete(this.props.event.id)}
+              data-toggle="tooltip"
+              data-placement="bottom"
+              title="Cancel Event"
+            >
+              <span className="fa fa-trash icon-2x"></span>
+            </button>
+          </div>
         </div>
       </li>
     );
   }
-  //          onCancel={this.props.onCancel}
-  //onIncrement = { this.props.onIncrement } />
 
   setBadgeClasses() {
-    let badgeclasses = "badge m-3";
+    let badgeclasses = "badge badge-pill m-2 ";
     badgeclasses +=
-      this.props.event.count === 0 ? "badge-danger" : "badge-info";
+      this.props.event.count === 0 ? "badge-danger" : "badge-dark";
     return badgeclasses;
   }
 

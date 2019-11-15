@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Event from "./event";
+import "./eventlist.css"
 
 class EventList extends Component {
   render() {
@@ -12,25 +13,13 @@ class EventList extends Component {
       />;
     });
     return (
-      <ul className="pl-sm-0 ml-sm-0 list-unstyled">{events}</ul>
+      <div className="eventslist-container">
+        <h2>Events/Courses</h2>
+        <hr />
+        <ul className="events-container list-unstyled">{events}</ul>
+      </div>
     );
   }
 }
 
 export default EventList;
-
-
-
-
-/*
-{
-  this.props.events.map(event => (
-    <Event
-      key={event.id}
-      event={event}
-      onCancel={this.props.onCancel}
-      onIncrement={this.props.onIncrement}
-    />
-  ))
-}
-*/

@@ -1,0 +1,45 @@
+@media only screen and (max-width: 480px){
+    .row {
+        line-height: 3rem;
+        background-color: white;
+        margin-top: 0.5rem;
+        margin-bottom: 0rem;
+        margin-left: .02rem !important;
+        margin-right: .02rem !important;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 481px){
+    .row {
+        line-height: 3rem;
+        background-color: white;
+        margin: 0.5rem !important;
+        padding: 0.5rem !important;
+    }
+}
+
+.add-buttons, .cancel-buttons {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+}
+
+.add-buttons button, .cancel-buttons button{
+    background: none;
+    font-size: 1em;
+    margin: 0.4em;
+    cursor: pointer;
+}
+
+.fa-plus:hover, .fa-trash:hover{
+    font-size: 115%;
+    text-shadow: 1px 1px lightgrey;
+    transition: 0.15s ease-in-out;
+}
+
+/* Can't get rid of the output after clicking on a button */
+.btn:active, .btn:focus{
+    outline: none !important;
+    outline: 0 !important;
+}
+

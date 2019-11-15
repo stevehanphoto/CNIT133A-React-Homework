@@ -1,0 +1,30 @@
+@media only screen and (max-width: 768px){
+    .eventslist-container {
+        width:100%;
+        background-color: whitesmoke;    
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+    }
+
+    .eventslist-container h2 {
+        padding-top: 1rem;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 769px){
+    .eventslist-container {
+        width:730px;
+        background-color: whitesmoke;
+        margin-top: 3rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding-right: 3rem;
+        padding-left: 3rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        border-radius: 0.5rem;;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
