@@ -1,14 +1,9 @@
 import React, { Component } from "react";
+import ReactTooltip from "react-tooltip";
 import "font-awesome/css/font-awesome.min.css";
 import "./event.css"
 
 class Event extends Component {
-/*  componentDidMount() {
-      $('[rel="tooltip"]').on("click", function() {
-        $(this).tooltip("hide");
-      });
-  }
-*/
   handleAddButton = () => {
     this.setState({ event: this.state.event.count + 1 });
   };
@@ -16,7 +11,7 @@ class Event extends Component {
   render() {
     return (
       <li className="row align-items-center">
-        <div className="courses text-wrap col-lg-10 col-md-8 col-sm-10 col-xs-12">
+        <div className="courses text-wrap col-lg-10 col-md-8 col-sm-10 col-xs-12 ">
           {this.props.event.name}
           <span className={this.setBadgeClasses()}>{this.formatCt()}</span>
         </div>
@@ -35,12 +30,10 @@ class Event extends Component {
             <button
               className="btn m-xs-0 p-xs-0 cancel-buttons d-inline-flex"
               onClick={() => this.props.onDelete(this.props.event.id)}
-              data-toggle="tooltip"
-              data-placement="bottom"
-              title="Cancel Event"
-              data-trigger="hover"
             >
-              <span className="fa fa-trash icon-2x"></span>
+              <span className="fa fa-trash icon-2x" data-tip="Cancel Event">
+                <ReactTooltip place="bottom" className="cancel-tooltip" />
+              </span>
             </button>
           </div>
         </div>

@@ -1,11 +1,15 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+/*import { $, jQuery } from 'jquery/jquery.min';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+*/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import "bootstrap/dist/css/bootstrap.css";
+//import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.min.css";
-//import $ from "jquery";
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
