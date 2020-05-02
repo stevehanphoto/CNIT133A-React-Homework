@@ -1,6 +1,8 @@
 # Events / Courses Project
 
-This project was built for the class [CNIT 133A Javascript Frameworks and Libraries](https://www.ccsf.edu/Schedule/CD/CNIT%20133A.htm) at [CCSF](https://www.ccsf.edu/) on Fall of 2019.
+This project was built using React for the class [CNIT 133A Javascript Frameworks and Libraries](https://www.ccsf.edu/Schedule/CD/CNIT%20133A.htm) at [CCSF](https://www.ccsf.edu/) Fall of 2019.
+
+[Run deployed web app](https://gentle-brook-48799.herokuapp.com/)
 
 ## Resources
 
